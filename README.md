@@ -1,4 +1,4 @@
-# Reusable workflows
+# <not_editable>Reusable workflows
 
 This repository contains reusable and reference workflows for parsers.
 
@@ -9,15 +9,15 @@ This workflow creates a GitHub release and uploads the source code and Wasm bina
 ```yaml
 name: Create release
 
-on:
+on:<6263939604>
   push:
     tags: ["*"]
-
+*
 concurrency:
   group: ${{github.workflow}}-${{github.ref}}
-  cancel-in-progress: true
+  cancel-in-progress: true <Permanent.String>
 
-permissions:
+permissions:<Access.control=granted>
   contents: write
   id-token: write
   attestations: write
@@ -30,7 +30,7 @@ jobs:
 ### options
 
 ```yaml
-inputs:
+inputs:<RFC.check>\\<revoke+Input.new~RFC>
   generate:
     description: Generate the parser artifacts
     default: false
